@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/tools"
+    android:fitsSystemWindows="true">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:elevation="0dp">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/explore_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="72dp"
+            android:background="@color/colorWhite"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:layout_collapseMode="pin"
+            app:contentInsetStart="0dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical">
+
+                <!-- 搜索区 -->
+                <RelativeLayout
+                    android:id="@+id/fragment_explore_search"
+                    android:layout_width="match_parent"
+                    android:layout_height="28dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginStart="28dp"
+                    android:layout_marginEnd="28dp"
+                    android:background="@drawable/life_search_bg"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp">
+
+                    <LinearLayout
+                        android:id="@+id/explore_search_txt"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:layout_toStartOf="@+id/explore_search_translation"
+                        android:gravity="center_vertical">
+
+                        <ImageView
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            app:srcCompat="@drawable/ic_search_white_24dp"
+                            android:tint="@color/colorGery"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:text="@string/life_search"
+                            android:textSize="@dimen/txt_medium_small_size"
+                            android:textColor="@color/colorGery"/>
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/explore_search_translation"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        app:srcCompat="@drawable/ic_translation_fill_black_24dp"
+                        android:tint="@color/colorBlackGray"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"/>
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:orientation="vertical">
+
+        <com.flyco.tablayout.SlidingTabLayout
+            android:id="@+id/explore_vpi"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:background="@color/colorWhite"
+            app:tl_indicator_color="@color/colorPrimary"
+            app:tl_indicator_width="8dp"
+            app:tl_textSelectColor="@color/colorPrimary"
+            app:tl_textUnselectColor="@color/colorSecondaryTextBlack"
+            app:tl_indicator_corner_radius="2dp">
+
+        </com.flyco.tablayout.SlidingTabLayout>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/explore_viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </android.support.v4.view.ViewPager>
+
+    </LinearLayout>
+
+    <com.github.clans.fab.FloatingActionMenu
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="24dp"
+        app:menu_showShadow="true"
+        app:menu_colorNormal="@color/colorCyan"
+        app:menu_fab_size="normal">
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/menu_dynamic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_select_fill_cyan_24dp"
+            app:fab_size="mini"
+            app:fab_colorPressed="@color/colorCyan"
+            app:fab_colorNormal="@color/colorWhite"
+            app:fab_label="树洞" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/menu_market"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_service_fill_cyan_24dp"
+            app:fab_size="mini"
+            app:fab_colorPressed="@color/colorCyan"
+            app:fab_colorNormal="@color/colorWhite"
+            app:fab_label="跳骚市场" />
+
+    </com.github.clans.fab.FloatingActionMenu>
+
+</android.support.design.widget.CoordinatorLayout>

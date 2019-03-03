@@ -1,0 +1,127 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.mob.sdk'
+
+android {
+    compileSdkVersion 27
+    defaultConfig {
+        applicationId "com.demo.somnus.bomda"
+        minSdkVersion 22
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+MobSDK {
+    appKey "250d02b7f87dc"
+    appSecret "059b23b1c7af44ebf5beb9cd50f4f7b5"
+
+    ShareSDK {
+        devInfo {
+            QQ {
+                appId "1106824122"
+                appKey "uvNQw1v1eHFNmHOd"
+            }
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support:design:27.1.1'
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.1'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+    implementation files('libs/BaiduLBS_Android.jar')
+
+    compile 'com.android.support:cardview-v7:27.1.1'
+
+    // Glide 图片加载框架
+    compile 'com.github.bumptech.glide:glide:3.8.0'
+    // Glide-Transformations
+    compile 'jp.wasabeef:glide-transformations:2.0.2'
+
+    // Bmob SDK
+    compile 'cn.bmob.android:bmob-im:2.0.9@aar'
+    compile 'cn.bmob.android:bmob-sdk:3.5.8'
+
+    // 沉浸式状态栏
+    compile 'com.gyf.barlibrary:barlibrary:2.3.0'
+
+
+    // 张鸿洋网络请求框架
+    compile('com.zhy:okhttputils:2.3.9') {
+        exclude group: 'com.squareup.okio'
+    }
+
+    // Jsoup网页解析器
+    compile 'org.jsoup:jsoup:1.10.3'
+    compile 'org.kie.modules:org-jsoup:6.5.0.Final'
+
+    // 验证码输入框
+    compile 'com.alimuzaffar.lib:pinentryedittext:1.3.1'
+
+    // 轮播图
+    compile 'com.jude:rollviewpager:1.4.6'
+    compile 'com.youth.banner:banner:1.1.5'
+
+    // 横向侧滑SnapHelper
+    implementation 'com.github.rubensousa:gravitysnaphelper:1.5'
+    // 横向侧滑RecyclerView
+    compile 'com.ryan.rv_gallery:rv-gallery:1.0.5'
+
+    //金色校园刷新
+    compile 'com.yalantis:phoenix:1.2.3'
+
+    // dialog
+    compile 'com.necer.ndialog2:ndialog:1.0.2'
+
+    //TabLayout
+    compile 'com.flyco.tablayout:FlycoTabLayout_Lib:2.1.2@aar'
+
+    // 超炫酷点赞效果
+    compile 'com.sackcentury:shinebutton:0.2.0'
+
+    // 动画库
+    compile 'com.eftimoff:android-pathview:1.0.8@aar'
+
+    // 九宫格
+    compile 'com.jaeger.ninegridimageview:library:1.1.1'
+    compile ('com.zhihu.android:matisse:0.5.0-alpha4') {
+        exclude group: 'it.sephiroth.android.library.imagezoom'
+    }
+    compile 'it.sephiroth.android.library.imagezoom:imagezoom:2.3.0'
+
+    // 电话输入
+    compile 'net.rimoto:intlphoneinput:1.0.1'
+
+    // 多级筛选
+    compile 'com.github.dongjunkun:DropDownMenu:1.0.4'
+
+    // loading
+    compile 'com.wang.avi:library:2.1.3'
+
+    // 图片库
+    compile 'com.github.florent37:shapeofview:1.0.6'
+
+    // 搜索框
+    implementation 'com.github.mancj:MaterialSearchBar:0.7.6'
+
+    // 标签
+    compile 'com.github.linger1216:labelview:v1.1.2'
+
+    // 二维码
+    compile 'com.google.zxing:core:3.3.2'
+
+    // FAB
+    compile 'com.github.clans:fab:1.6.4'
+}

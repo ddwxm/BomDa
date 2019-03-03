@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.demo.somnus.bomda">
+
+    <!-- 这个权限用于进行网络定位-->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- 这个权限用于访问GPS定位-->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位-->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 获取运营商信息，用于支持提供运营商信息相关的接口-->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位-->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <!-- 用于读取手机当前的状态-->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <!-- 写入扩展存储，向扩展卡写入数据，用于写入离线定位数据-->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <!-- 访问网络，网络定位需要上网-->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- SD卡读取权限，用户写入离线定位数据-->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <!-- 允许联网 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!--允许程序打开网络套接字-->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <!-- 获取GSM（2g）、WCDMA（联通3g）等网络状态的信息 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 获取 wifi 网络状态的信息 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 保持 CPU 运转，屏幕和键盘灯有可能是关闭的，用于文件上传和下载 -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!-- 获取sd卡写的权限，用于文件上传和下载 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 允许读取手机状态，用于创建 BmobInstallation -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+
+    <application
+        android:allowBackup="true"
+        android:name=".BomDaApplication"
+        android:icon="@mipmap/logo"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!-- 百度API——KEY -->
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="	HYcCVfNlGYGlsbQBuQIOz44F6GKnzlFS" >
+        </meta-data>
+
+        <!-- 百度定位服务 -->
+        <service android:name="com.baidu.location.f" android:enabled="true" android:process=":remote"/>
+
+        <!-- 欢迎Activity -->
+        <activity
+            android:name=".view.activity.WelcomeActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".view.activity.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+
+        <!-- 登录Activity -->
+        <activity
+            android:name=".view.activity.LoginActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <!-- 注册Activity -->
+        <activity
+            android:name=".view.activity.RegisterActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <!-- 个人中心Activity -->
+        <activity
+            android:name=".view.activity.PersonActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <!-- 编辑个人资料Activity -->
+        <activity
+            android:name=".view.activity.ModifiedActivity"
+            android:label="@string/person_editor"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <!-- 设置Activity -->
+        <activity
+            android:name=".view.activity.SettingActivity"
+            android:label="@string/activity_setting"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <!-- 校园资讯Activity -->
+        <activity
+            android:name=".view.activity.NewsActivity"
+            android:label="@string/activity_news"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <!-- 校园公告Activity -->
+        <activity
+            android:name=".view.activity.NoticeActivity"
+            android:label="@string/activity_announcement"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <!-- 校园公告详情Activity -->
+        <activity
+            android:name=".view.activity.NoticeDetailsActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <!-- 校园新闻详情Activity -->
+        <activity
+            android:name=".view.activity.NewsDetailsActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <!-- 考试Activity -->
+        <activity
+            android:name=".view.activity.TestActivity"
+            android:label="@string/activity_test"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <!-- 成绩Activity -->
+        <activity
+            android:name=".view.activity.GradeActivity"
+            android:label="@string/activity_grade"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <!-- 课表Activity -->
+        <activity
+            android:name=".view.activity.ScheduleActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <!-- 绑定Activity -->
+        <activity
+            android:name=".view.activity.BindingActivity"
+            android:label="@string/activity_binding"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <!-- 图片预览Activity -->
+        <activity
+            android:name=".view.activity.ViewImageActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.translucent">
+        </activity>
+
+        <!-- 帐号管理Activity -->
+        <activity
+            android:name=".view.activity.AccountActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <!-- 收藏Activity -->
+        <activity
+            android:name=".view.activity.CollectActivity"
+            android:label="@string/activity_collection"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <!-- 图片预览Activity -->
+        <activity android:name=".view.activity.PreviewPicturesActivity"
+            android:theme="@style/AppTheme.NoActionBar.Fullscreen"
+            android:launchMode="singleTask"
+            android:screenOrientation="unspecified">
+        </activity>
+
+        <!-- 发布树洞Activity -->
+        <activity android:name=".view.activity.PostTeaseActivity"
+            android:label="@string/activity_postTease"
+            android:launchMode="singleTask"
+            android:screenOrientation="unspecified">
+        </activity>
+
+        <!-- 图书馆Activity -->
+        <activity android:name=".view.activity.LibraryActivity"
+            android:label="@string/activity_library"
+            android:launchMode="singleTask"
+            android:screenOrientation="unspecified">
+        </activity>
+
+        <!-- 我的关注Activity -->
+        <activity android:name=".view.activity.FocusActivity"
+            android:label="@string/activity_focus"
+            android:launchMode="singleTask"
+            android:screenOrientation="unspecified">
+        </activity>
+
+        <!-- 校历Activity -->
+        <activity android:name=".view.activity.CalendarActivity"
+            android:label="@string/activity_calendar"
+            android:launchMode="singleTask"
+            android:screenOrientation="unspecified">
+        </activity>
+
+    </application>
+
+</manifest>

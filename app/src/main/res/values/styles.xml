@@ -1,0 +1,139 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="Dialog" parent="android:style/Theme.Dialog">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="CustomAlertDialog" parent="Animation.AppCompat.Dialog">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/colorLightBlue</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar.Fullscreen">
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="AppTheme.FullScreen" parent="AppTheme">
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="colorPrimaryDark">#33000000</item>
+        <item name="android:navigationBarColor">#33000000</item>
+        <item name="android:windowContentTransitions">true</item>
+    </style>
+
+    <style name="TabTextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">?android:textColorSecondary</item>
+        <item name="textAllCaps">true</item>
+    </style>
+
+    <!-- come from xiaoming -->
+    <style name="AppTheme.translucent">
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@color/windowBackgroundTranslucent</item>
+        <item name="android:windowAnimationStyle">@style/ImPopupLayoutAnimation</item>
+    </style>
+
+    <style name="ImPopupLayoutAnimation" parent="@android:style/Animation.Translucent">
+        <item name="android:windowEnterAnimation">@null</item>
+        <item name="android:windowExitAnimation">@null</item>
+    </style>
+
+    <style name="DialogButton" parent="Base.Widget.AppCompat.Button.Borderless.Colored">
+        <item name="android:minWidth">56dp</item>
+        <item name="android:minHeight">36dp</item>
+        <item name="android:paddingTop">4dp</item>
+        <item name="android:paddingBottom">4dp</item>
+        <item name="android:paddingStart">12dp</item>
+        <item name="android:paddingEnd">12dp</item>
+        <item name="android:background">@drawable/bg_ripple_black</item>
+    </style>
+
+    <style name="font_size_small">
+        <item name="android:textSize">14sp</item>
+    </style>
+    <style name="font_size_medium">
+        <item name="android:textSize">16sp</item>
+    </style>
+    <style name="font_size_big">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <!-- 夜间主题 -->
+    <style name="AppThemeBlack" parent="Theme.AppCompat">
+        <item name="colorPrimary">@color/colorLightNoBlack</item>
+        <item name="colorPrimaryDark">@color/colorLightNoBlack</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppThemeBlack.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <!-- 女生主题 -->
+    <style name="AppThemePink" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorNormalPink</item>
+        <item name="colorPrimaryDark">@color/colorNormalPink</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppThemePink.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <!-- 男生主题 -->
+    <style name="AppThemeGreen" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorNormalGreen</item>
+        <item name="colorPrimaryDark">@color/colorNormalGreen</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppThemeGreen.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <!-- 紫色主题 -->
+    <style name="AppThemePurple" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">#673ab7</item>
+        <item name="colorPrimaryDark">#512da8</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppThemePurple.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="SplashTheme" parent="AppTheme">
+        <!-- 欢迎页背景引用刚才写好的 -->
+        <item name="android:windowBackground">@mipmap/start</item>
+        <item name="android:windowFullscreen">true</item>
+        <!-- <item name="android:windowIsTranslucent">true</item> --> <!-- 透明背景不要了 -->
+    </style>
+
+</resources>

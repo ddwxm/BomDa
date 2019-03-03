@@ -1,0 +1,590 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:fitsSystemWindows="true">
+
+<android.support.design.widget.AppBarLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:theme="@style/AppTheme.AppBarOverlay">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/settings_include_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:popupTheme="@style/AppTheme.PopupOverlay" >
+
+    </android.support.v7.widget.Toolbar>
+
+</android.support.design.widget.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <RelativeLayout
+            android:id="@+id/account_rl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible">
+
+            <android.support.v4.widget.NestedScrollView
+                android:id="@+id/account_NS"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible">
+
+                <RelativeLayout
+                    android:id="@+id/account"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="visible">
+
+                    <!-- 账号标题 -->
+                    <TextView
+                        android:id="@+id/account_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/account_title"
+                        android:textColor="@color/colorBlue"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:textSize="@dimen/txt_title_medium_size"/>
+
+                    <!-- 账号设置 -->
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/account_cardView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/account_title"
+                        android:layout_margin="8dp"
+                        app:cardElevation="4dp">
+
+                        <!-- 账号设置 -->
+                        <LinearLayout
+                            android:id="@+id/account_article"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:paddingTop="@dimen/padding_small_margin"
+                            android:paddingBottom="@dimen/padding_small_margin">
+
+                            <!-- 邮箱 -->
+                            <RelativeLayout
+                                android:id="@+id/account_email_article"
+                                android:layout_width="match_parent"
+                                android:layout_height="60dp"
+                                android:clickable="true"
+                                android:background="?selectableItemBackground"
+                                android:paddingStart="@dimen/padding_margin"
+                                android:paddingEnd="@dimen/padding_margin">
+
+                                <TextView
+                                    android:id="@+id/account_email"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/account_email"
+                                    android:textSize="@dimen/txt_medium_size"
+                                    android:layout_marginTop="10dp"
+                                    android:textColor="@color/textPrimaryLight"/>
+
+                                <TextView
+                                    android:id="@+id/account_email_txt"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:text="@string/account_email_txt"
+                                    android:gravity="bottom"
+                                    android:paddingBottom="8dp"
+                                    android:textSize="@dimen/txt_medium_small_size"
+                                    android:textColor="@color/textPrimaryLight"/>
+
+                                <LinearLayout
+                                    android:id="@+id/account_email_state"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_centerVertical="true"
+                                    android:orientation="horizontal"
+                                    android:gravity="center_vertical">
+
+                                    <TextView
+                                        android:id="@+id/email_state_txt"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/account_verify"
+                                        android:textColor="@color/textPrimaryLight"
+                                        android:layout_marginEnd="2dp"/>
+
+                                    <ImageView
+                                        android:id="@+id/email_state_icon"
+                                        android:layout_width="24dp"
+                                        android:layout_height="24dp"
+                                        app:srcCompat="@drawable/ic_security_grey_24dp"
+                                        android:scaleType="centerCrop"/>
+                                </LinearLayout>
+
+                            </RelativeLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="0.1dp"
+                                android:background="@color/colorGery"/>
+
+                            <!-- 手机 -->
+                            <RelativeLayout
+                                android:id="@+id/account_phone_article"
+                                android:layout_width="match_parent"
+                                android:layout_height="60dp"
+                                android:clickable="true"
+                                android:background="?selectableItemBackground"
+                                android:paddingStart="@dimen/padding_margin"
+                                android:paddingEnd="@dimen/padding_margin">
+
+                                <TextView
+                                    android:id="@+id/account_phone"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/account_phone"
+                                    android:textSize="@dimen/txt_medium_size"
+                                    android:layout_marginTop="10dp"
+                                    android:textColor="@color/textPrimaryLight"/>
+
+                                <TextView
+                                    android:id="@+id/account_phone_txt"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:text="@string/account_phoneNumber"
+                                    android:gravity="bottom"
+                                    android:paddingBottom="8dp"
+                                    android:textSize="@dimen/txt_medium_small_size"
+                                    android:textColor="@color/textPrimaryLight"/>
+
+                                <LinearLayout
+                                    android:id="@+id/account_phone_state"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_centerVertical="true"
+                                    android:orientation="horizontal"
+                                    android:gravity="center_vertical">
+
+                                    <TextView
+                                        android:id="@+id/phone_state_txt"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/account_authenticated"
+                                        android:textColor="@color/textPrimaryLight"
+                                        android:layout_marginEnd="2dp"/>
+
+                                    <ImageView
+                                        android:id="@+id/phone_state_icon"
+                                        android:layout_width="24dp"
+                                        android:layout_height="24dp"
+                                        app:srcCompat="@drawable/ic_security_blue_24dp"
+                                        android:scaleType="centerCrop"/>
+
+                                </LinearLayout>
+
+                            </RelativeLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="0.1dp"
+                                android:background="@color/colorGery"/>
+
+                            <!-- 修改密码 -->
+                            <RelativeLayout
+                                android:id="@+id/account_password_article"
+                                android:layout_width="match_parent"
+                                android:layout_height="60dp"
+                                android:clickable="true"
+                                android:background="?selectableItemBackground"
+                                android:paddingStart="@dimen/padding_margin"
+                                android:paddingEnd="@dimen/padding_margin">
+
+                                <TextView
+                                    android:id="@+id/account_password"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/account_password"
+                                    android:textSize="@dimen/txt_medium_size"
+                                    android:layout_marginTop="10dp"
+                                    android:textColor="@color/textPrimaryLight"/>
+
+                                <TextView
+                                    android:id="@+id/account_password_txt"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:text="@string/account_new_password"
+                                    android:gravity="bottom"
+                                    android:paddingBottom="8dp"
+                                    android:textSize="@dimen/txt_medium_small_size"
+                                    android:textColor="@color/textPrimaryLight"/>
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                    </android.support.v7.widget.CardView>
+
+                    <!-- 账号安全标题 -->
+                    <TextView
+                        android:id="@+id/security_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/security_title"
+                        android:textColor="@color/colorBlue"
+                        android:layout_below="@+id/account_cardView"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:textSize="@dimen/txt_title_medium_size"/>
+
+                    <!-- 账号设置 -->
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/security_cardView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/security_title"
+                        android:layout_margin="8dp"
+                        app:cardElevation="4dp">
+
+                        <!-- 账号设置 -->
+                        <LinearLayout
+                            android:id="@+id/security_article"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:paddingTop="@dimen/padding_small_margin"
+                            android:paddingBottom="@dimen/padding_small_margin">
+
+                            <!-- 信任设备 -->
+                            <RelativeLayout
+                                android:id="@+id/security_equipment_article"
+                                android:layout_width="match_parent"
+                                android:layout_height="60dp"
+                                android:clickable="true"
+                                android:background="?selectableItemBackground"
+                                android:paddingStart="@dimen/padding_margin"
+                                android:paddingEnd="@dimen/padding_margin">
+
+                                <TextView
+                                    android:id="@+id/security_equipment"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/security_equipment"
+                                    android:textSize="@dimen/txt_medium_size"
+                                    android:layout_marginTop="10dp"
+                                    android:textColor="@color/textPrimaryLight"/>
+
+                                <TextView
+                                    android:id="@+id/security_equipment_txt"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:text="@string/security_equipment_txt"
+                                    android:gravity="bottom"
+                                    android:paddingBottom="8dp"
+                                    android:textSize="@dimen/txt_medium_small_size"
+                                    android:textColor="@color/textPrimaryLight"/>
+
+                            </RelativeLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="0.1dp"
+                                android:background="@color/colorGery"/>
+
+                            <!-- 历史活动 -->
+                            <RelativeLayout
+                                android:id="@+id/security_activity_article"
+                                android:layout_width="match_parent"
+                                android:layout_height="60dp"
+                                android:clickable="true"
+                                android:background="?selectableItemBackground"
+                                android:paddingStart="@dimen/padding_margin"
+                                android:paddingEnd="@dimen/padding_margin">
+
+                                <TextView
+                                    android:id="@+id/security_activity"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/security_activity"
+                                    android:textSize="@dimen/txt_medium_size"
+                                    android:layout_marginTop="10dp"
+                                    android:textColor="@color/textPrimaryLight"/>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="horizontal"
+                                    android:gravity="bottom"
+                                    android:paddingBottom="8dp">
+
+                                    <TextView
+                                        android:id="@+id/security_activity_number"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/security_activity_number"
+                                        android:textSize="@dimen/txt_medium_small_size"
+                                        android:textColor="@color/textPrimaryLight"/>
+
+                                    <TextView
+                                        android:id="@+id/security_activity_txt"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/security_activity_txt"
+                                        android:textSize="@dimen/txt_medium_small_size"
+                                        android:textColor="@color/textPrimaryLight"/>
+
+                                </LinearLayout>
+
+                            </RelativeLayout>
+
+
+                        </LinearLayout>
+
+                    </android.support.v7.widget.CardView>
+
+                    <!-- 社交账号标题 -->
+                    <TextView
+                        android:id="@+id/social_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/social_title"
+                        android:textColor="@color/colorBlue"
+                        android:layout_below="@+id/security_cardView"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:textSize="@dimen/txt_title_medium_size"/>
+
+                    <!-- 社交账号 -->
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/social_cardView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/social_title"
+                        android:layout_margin="8dp"
+                        app:cardElevation="4dp">
+
+                        <!-- 账号绑定 -->
+                        <LinearLayout
+                            android:id="@+id/social_article"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:paddingTop="@dimen/padding_small_margin"
+                            android:paddingBottom="@dimen/padding_small_margin">
+
+                            <!-- 学号 -->
+                            <RelativeLayout
+                                android:id="@+id/social_student_article"
+                                android:layout_width="match_parent"
+                                android:layout_height="60dp"
+                                android:clickable="true"
+                                android:background="?selectableItemBackground"
+                                android:paddingStart="@dimen/padding_margin"
+                                android:paddingEnd="@dimen/padding_margin">
+
+                                <TextView
+                                    android:id="@+id/social_student"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/social_studentNumBer"
+                                    android:textSize="@dimen/txt_medium_size"
+                                    android:layout_marginTop="10dp"
+                                    android:textColor="@color/textPrimaryLight"/>
+
+                                <TextView
+                                    android:id="@+id/social_student_txt"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:text="@string/social_not_bound"
+                                    android:gravity="bottom"
+                                    android:paddingBottom="8dp"
+                                    android:textSize="@dimen/txt_medium_small_size"
+                                    android:textColor="@color/textPrimaryLight"/>
+
+                            </RelativeLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="0.1dp"
+                                android:background="@color/colorGery"/>
+
+                            <!-- QQ -->
+                            <RelativeLayout
+                                android:id="@+id/social_QQ_article"
+                                android:layout_width="match_parent"
+                                android:layout_height="60dp"
+                                android:clickable="true"
+                                android:background="?selectableItemBackground"
+                                android:paddingStart="@dimen/padding_margin"
+                                android:paddingEnd="@dimen/padding_margin">
+
+                                <TextView
+                                    android:id="@+id/social_QQ"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/social_QQ"
+                                    android:textSize="@dimen/txt_medium_size"
+                                    android:layout_marginTop="10dp"
+                                    android:textColor="@color/textPrimaryLight"/>
+
+                                <TextView
+                                    android:id="@+id/social_QQ_txt"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:text="@string/social_not_bound"
+                                    android:gravity="bottom"
+                                    android:paddingBottom="8dp"
+                                    android:textSize="@dimen/txt_medium_small_size"
+                                    android:textColor="@color/textPrimaryLight"/>
+
+                                <ImageView
+                                    android:id="@+id/qq_state_icon"
+                                    android:layout_width="24dp"
+                                    android:layout_height="24dp"
+                                    app:srcCompat="@drawable/ic_social_qq_nologin_colorful_24dp"
+                                    android:scaleType="centerCrop"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_centerVertical="true" />
+
+                            </RelativeLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="0.1dp"
+                                android:background="@color/colorGery"/>
+
+                            <!-- 微博 -->
+                            <RelativeLayout
+                                android:id="@+id/social_WeiBo_article"
+                                android:layout_width="match_parent"
+                                android:layout_height="60dp"
+                                android:clickable="true"
+                                android:background="?selectableItemBackground"
+                                android:paddingStart="@dimen/padding_margin"
+                                android:paddingEnd="@dimen/padding_margin">
+
+                                <TextView
+                                    android:id="@+id/social_WeiBo"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/social_sina_WeiBo"
+                                    android:textSize="@dimen/txt_medium_size"
+                                    android:layout_marginTop="10dp"
+                                    android:textColor="@color/textPrimaryLight"/>
+
+                                <TextView
+                                    android:id="@+id/social_WeiBo_txt"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:text="@string/social_not_online"
+                                    android:gravity="bottom"
+                                    android:paddingBottom="8dp"
+                                    android:textSize="@dimen/txt_medium_small_size"
+                                    android:textColor="@color/textPrimaryLight"/>
+
+                            </RelativeLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="0.1dp"
+                                android:background="@color/colorGery"/>
+
+                            <!-- 微信 -->
+                            <RelativeLayout
+                                android:id="@+id/social_Micro_letter_article"
+                                android:layout_width="match_parent"
+                                android:layout_height="60dp"
+                                android:clickable="true"
+                                android:background="?selectableItemBackground"
+                                android:paddingStart="@dimen/padding_margin"
+                                android:paddingEnd="@dimen/padding_margin">
+
+                                <TextView
+                                    android:id="@+id/social_Micro_letter"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/social_Micro_letter"
+                                    android:textSize="@dimen/txt_medium_size"
+                                    android:layout_marginTop="10dp"
+                                    android:textColor="@color/textPrimaryLight"/>
+
+                                <TextView
+                                    android:id="@+id/social_Micro_letter_txt"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:text="@string/social_not_online"
+                                    android:gravity="bottom"
+                                    android:paddingBottom="8dp"
+                                    android:textSize="@dimen/txt_medium_small_size"
+                                    android:textColor="@color/textPrimaryLight"/>
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                    </android.support.v7.widget.CardView>
+
+                </RelativeLayout>
+
+
+
+            </android.support.v4.widget.NestedScrollView>
+        </RelativeLayout>
+
+        <!-- 黑名单 -->
+        <RelativeLayout
+            android:id="@+id/blacklist_rl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="?actionBarSize"
+            android:visibility="gone">
+            <RelativeLayout
+                android:id="@+id/blacklist_null"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone">
+                <ImageView
+                    android:id="@+id/null_icon"
+                    android:layout_width="128dp"
+                    android:layout_height="128dp"
+                    android:layout_centerInParent="true"
+                    app:srcCompat="@drawable/ic_null_grey_128dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/blacklist_null"
+                    android:layout_below="@+id/null_icon"
+                    android:layout_centerInParent="true"
+                    android:textSize="@dimen/txt_medium_big_size"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/blacklist"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <android.support.v4.widget.SwipeRefreshLayout
+                    android:id="@+id/blacklist_sw"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/blacklist_re"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                    </android.support.v7.widget.RecyclerView>
+                </android.support.v4.widget.SwipeRefreshLayout>
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>

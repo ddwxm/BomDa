@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:foreground="?attr/selectableItemBackgroundBorderless"
+    android:stateListAnimator="@animator/cardview_touch_raise"
+    app:cardElevation="2dp"
+    app:cardCornerRadius="2dp"
+    android:clickable="true"
+    android:layout_marginStart="8dp"
+    android:layout_marginEnd="8dp"
+    android:layout_marginTop="8dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/item_news_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/announcement_title"
+            android:textSize="@dimen/txt_medium_size"
+            android:textColor="@color/textPrimaryLight"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="24dp"
+            android:layout_below="@+id/item_news_title"
+            android:layout_marginTop="12dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/announcement_symbol_one"/>
+                <TextView
+                    android:id="@+id/item_news_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/announcement_type"
+                    android:layout_marginStart="2dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/announcement_symbol_two"
+                    android:layout_marginStart="2dp"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/item_news_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/announcement_time"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:textSize="@dimen/txt_medium_small_size"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

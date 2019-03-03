@@ -1,0 +1,425 @@
+<resources>
+    <string name="app_name">BomDa</string>
+    <string name="school_name">海南师范大学</string>
+    <string name="app_logo">APP Logo</string>
+    <string name="welcome_image">Welcome Image</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="mine_login_title">登录邦达，享受更好体验</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="activity_binding">绑定</string>
+    <string name="activity_educational">教务在线</string>
+    <string name="activity_setting">设置</string>
+    <string name="activity_announcement">校园公告</string>
+    <string name="activity_grade">成绩</string>
+    <string name="activity_schedule">课表</string>
+    <string name="activity_news">校园资讯</string>
+    <string name="activity_time">时间</string>
+    <string name="activity_test">考试</string>
+    <string name="activity_postTease">发布树洞</string>
+    <string name="activity_postMarket">发布</string>
+    <string name="activity_collection">我的收藏</string>
+    <string name="activity_library">图书馆新闻</string>
+    <string name="activity_focus">我的关注</string>
+    <string name="activity_friend">我的好友</string>
+    <string name="activity_buys">我的购买</string>
+    <string name="activity_dynamic">我的发布</string>
+    <string name="activity_nearby">附近的人</string>
+    <string name="activity_calendar">2017-2018校历</string>
+
+    <!-- noData -->
+    <string name="activity_focus_no">还没有关注的呦</string>
+    <string name="activity_test_no">还没有考试呦</string>
+
+    <!-- main_drawer -->
+    <string name="main_drawer_situation">学校概况</string>
+    <string name="main_drawer_grade">成绩</string>
+    <string name="main_drawer_like">表白墙</string>
+    <string name="main_drawer_service">服务</string>
+    <string name="main_drawer_announcement">校园公告</string>
+    <string name="main_drawer_calendar">校历</string>
+    <string name="main_drawer_schedule">课表</string>
+    <string name="main_drawer_evaluation">教学评价</string>
+    <string name="main_drawer_life">微圈</string>
+    <string name="main_drawer_news">资讯</string>
+    <string name="main_drawer_time">考试</string>
+    <string name="main_drawer_friends">我的好友</string>
+    <string name="main_drawer_nearby">附近的人</string>
+    <string name="main_drawer_Communicate">更多</string>
+    <string name="main_drawer_library">图书馆</string>
+    <string name="main_drawer_tool">设置</string>
+    <string name="main_drawer_about">关于</string>
+    <string name="main_drawer_exit">注销</string>
+
+    <string name="home_announcement_activity">校园活动</string>
+    <string name="home_tips">小提示</string>
+    <string name="home_weather">天气</string>
+
+    <string name="item_activity_name">活动名</string>
+    <string name="item_activity_info">活动介绍活动介绍活动介绍活动介绍活动介绍活动介绍活动介绍活动介绍活动介绍活动介绍活动介绍活动介绍活动介绍活动介绍活动介绍活动介绍活动介绍活动介绍活动介绍活动介绍活动介绍活动介绍</string>
+    <string name="item_activity_sponsor">14软件工程</string>
+    <string name="item_activity_time">2018/5/6</string>
+    <string name="item_activity_address">曾宪云报告厅</string>
+    <string name="item_activity_symbol_one">(</string>
+    <string name="item_activity_symbol_two">)</string>
+
+    <string name="main_homing_activity">寻物招领</string>
+
+    <string name="main_bottom">已经到底部了呦</string>
+
+    <string name="navigation_home">首页</string>
+    <string name="navigation_life">探索</string>
+    <string name="navigation_mine">我的</string>
+
+    <string name="grade_title_name">课程</string>
+    <string name="grade_title_grade">分数</string>
+
+    <string name="life_write_dynamic">树洞</string>
+    <string name="life_write_market">跳骚市场</string>
+
+    <string name="home_search">搜索资讯/用户/活动</string>
+    <string name="life_search">搜索闲物/用户/专题</string>
+
+    <!-- mine -->
+    <string name="mine_nick">用户昵称</string>
+    <string name="mine_location">海南海口</string>
+    <string name="mine_dynamic">我的动态</string>
+    <string name="mine_post">我的发布</string>
+    <string name="mine_collection">我的收藏</string>
+    <string name="mine_focus">我的关注</string>
+    <string name="mine_friends">我的好友</string>
+    <string name="mine_buys">我的购买</string>
+    <string name="mine_nearby">附近的人</string>
+    <string name="mine_logout_title">登录更精彩</string>
+    <string name="mine_login_txt">现在去登录</string>
+    <string name="mine_num">0</string>
+    <string name="mine_dynamic_title">动态</string>
+    <string name="mine_love_title">获赞</string>
+    <string name="mine_collection_title">收藏</string>
+    <string name="mine_focus_title">关注</string>
+    <string name="mine_look">查看或编辑个人主页</string>
+
+    <!-- nav -->
+    <string name="nav_number">201424070133</string>
+    <string name="nav_nick">Somnus</string>
+    <string name="nav_location">美兰区</string>
+    <string name="nav_temperature">16</string>
+    <string name="nav_symbol">℃</string>
+    <string name="nav_update_time">刚刚更新</string>
+    <string name="nav_weather">晴</string>
+    <string name="nav_aqi">良好</string>
+    <string name="nav_prompt">温馨提示:</string>
+    <string name="nav_prompt_content">未来两小时不会下雨，放心出门吧</string>
+
+    <string name="activity_calendar_one">第一学期</string>
+    <string name="activity_calendar_two">第二学期</string>
+
+
+    <!-- login_first -->
+    <string name="login_logo">登录</string>
+    <string name="login_phone">手机登录</string>
+    <string name="login_other">其他方式登录</string>
+    <string name="login_register_text">还没有账号？</string>
+    <string name="login_register">立即注册</string>
+    <string name="login_qq_binding">绑定手机号</string>
+    <string name="login_qq_code">发送验证码</string>
+
+    <!-- login_second -->
+    <string name="login_username_logo">用户名(手机号)</string>
+    <string name="login_password_logo">密码</string>
+    <string name="login_password_hint">至少六位密码</string>
+    <string name="login_password_forget">忘记密码?</string>
+    <string name="login_login">登录</string>
+
+    <string name="login_password">密码登录</string>
+    <string name="login_code">验证码登录</string>
+    <string name="login_new_password">输入验证码以及新密码</string>
+    <string name="new_password">请输入新密码</string>
+
+    <!-- progress dialog -->
+    <string name="dialog_progress_error_msg">错误信息：(%1$d) %2$s。</string>
+
+    <!-- register -->
+    <string name="register_phoneNum_logo">手机号</string>
+    <string name="register_title">注册</string>
+    <string name="register_phone">手机注册</string>
+    <string name="register_agreement">服务协议</string>
+    <string name="register_privacy">隐私条款</string>
+    <string name="register_txt">注册即代表同意BomDa </string>
+    <string name="register_and"> 和 </string>
+    <string name="area_code">+86</string>
+    <string name="register_next">下一步</string>
+    <string name="register_code">输入验证码</string>
+    <string name="register_send">短信已发送至+86</string>
+    <string name="register_phoneNum">12345678911</string>
+    <string name="register_timer">59s后可重发</string>
+
+    <!-- unbounded -->
+    <string name="binding_title">提示</string>
+    <string name="binding_unbounded">你还没有绑定学号</string>
+    <string name="binding_go">现在去绑定</string>
+    <string name="binding_no">暂不绑定</string>
+
+    <string name="binding_id">学号</string>
+    <string name="binding_password">密码</string>
+    <string name="binding_code">验证码</string>
+    <string name="binding_binding">绑 定</string>
+    <string name="binding_prompt">绑定即同意</string>
+    <string name="binding_agreement">《BomDa隐私条款》</string>
+
+    <!-- welcome -->
+    <string name="welcome_logo">BomDa</string>
+    <string name="welcome_signature">传承海师、服务海师</string>
+    <string name="welcome_s">3s</string>
+
+    <!-- educational -->
+    <string name="educational_hello">您好：</string>
+    <string name="educational_studentName">王小明</string>
+
+    <!-- fragment_home_includeHome -->
+    <string name="home_title">公告标题</string>
+    <string name="home_unit">发布单位</string>
+    <string name="home_time">发布时间</string>
+    <string name="home_term">有效期限</string>
+
+    <string name="announcement_title">关于成绩提交后，使用360浏览器不能正常打印输出的解决方法</string>
+    <string name="announcement_unit">教务处</string>
+    <string name="announcement_time">2016-05-10 10:34:12</string>
+    <string name="announcement_term">2019-05-30</string>
+    <string name="announcement_symbol_one">[</string>
+    <string name="announcement_type">学校公告</string>
+    <string name="announcement_symbol_two">]</string>
+    <string name="source">来源:</string>
+    <string name="time">时间:</string>
+
+    <!-- activity_settings -->
+    <string name="basic_settings">基本设置</string>
+    <string name="notice_settings">通知设置</string>
+    <string name="account_settings">账号设置</string>
+    <string name="exit_settings">退出账号</string>
+    <string name="about_help">关于与帮助</string>
+    <string name="propaganda_settings">最终解释权归 BomDa 所有</string>
+    <string name="All_rights_reserved">All rights reserved</string>
+    <!-- basic_settings -->
+    <string name="provincial_traffic">省流量模式</string>
+    <string name="provincial_traffic_txt">仅在Wi-Fi环境下才会自动加载图片</string>
+    <!-- font_size -->
+    <string name="theme_kind">主题皮肤</string>
+    <!-- Video_playback -->
+    <string name="video_playback">视频自动播放</string>
+    <string name="video_playback_txt">仅在Wi-Fi环境下视频自动播放</string>
+    <!-- Night_pattern -->
+    <string name="night_pattern">自动切换日夜间模式</string>
+    <string name="night_pattern_on">开启</string>
+    <string name="night_pattern_off">关闭</string>
+    <!-- clear_cache -->
+    <string name="clear_cache">清除缓存</string>
+    <string name="clear_cache_txt">包括图片、音频和视频缓存(共</string>
+    <string name="cache_size">3.2MB</string>
+    <string name="symbol">)</string>
+    <!-- notifications -->
+    <string name="notifications_new_message">新消息提醒</string>
+    <string name="notice_prompt">提示音</string>
+    <string name="notice_system">系统音效</string>
+    <string name="notice_vibration">震动</string>
+    <!-- account -->
+    <string name="account_security">账号与安全</string>
+    <string name="account_security_txt">管理账号安全、修改账号密码等</string>
+    <string name="account_blacklist">黑名单</string>
+    <string name="account_blacklist_txt">管理黑名单</string>
+    <!-- about_help -->
+    <string name="feedback">意见反馈</string>
+    <string name="check_update">检查更新</string>
+    <string name="check_update_txt">当前版本</string>
+    <string name="version">1.0</string>
+    <string name="agreement">BomDa协议</string>
+
+    <!-- account -->
+    <string name="account_title">BomDa账号</string>
+    <string name="account_email">邮箱</string>
+    <string name="account_email_txt">绑定邮箱</string>
+    <string name="account_phone">手机</string>
+    <string name="account_phoneNumber">+86187****5507</string>
+    <string name="account_phone_txt">绑定手机</string>
+    <string name="account_password">账号密码</string>
+    <string name="account_new_password">修改密码</string>
+    <string name="account_authenticated">已验证</string>
+    <string name="account_verify">尚未验证</string>
+    <string name="security_title">账号安全</string>
+    <string name="security_equipment">信任设备</string>
+    <string name="security_equipment_txt">暂无，现在去设置</string>
+    <string name="security_activity">最近历史活动</string>
+    <string name="security_activity_number">2次</string>
+    <string name="security_activity_txt">活动会话</string>
+    <string name="social_title">社交账号</string>
+    <string name="social_studentNumBer">海师学号</string>
+    <string name="social_sina_WeiBo">新浪微博</string>
+    <string name="social_QQ">QQ</string>
+    <string name="social_Micro_letter">微信</string>
+    <string name="social_not_bound">尚未绑定</string>
+    <string name="social_is_bound">已绑定</string>
+    <string name="social_not_online">尚未上线</string>
+    <string name="blacklist_null">还没有内容</string>
+
+    <!-- blacklist -->
+    <string name="item_blacklist_remove">移出黑名单</string>
+
+    <!-- password Change -->
+    <string name="change_title">设置新密码</string>
+    <string name="change_new_hint">密码不少于6位</string>
+    <string name="change_again">请再次输入密码</string>
+    <string name="change_confirm">确定</string>
+
+    <!-- person -->
+    <string name="person_nick">小明哒哒哒哒</string>
+    <string name="person_focus">我关注的人</string>
+    <string name="person_focus_txt">0</string>
+    <string name="person_fans">关注我的人</string>
+    <string name="person_fans_txt">0</string>
+    <string name="person_cover">封面</string>
+    <string name="person_editor">编辑个人资料</string>
+    <string name="person_introduction">一句话描述一下自己吧</string>
+    <string name="person_setting_nick">昵称</string>
+    <string name="person_setting_sex_man">男</string>
+    <string name="person_setting_sex_woman">女</string>
+    <string name="person_setting_introduction">个人介绍</string>
+    <string name="person_setting_signature">一句话描述</string>
+    <string name="person_setting_industry">行业</string>
+    <string name="person_setting_industry_txt">选择行业</string>
+    <string name="person_setting_address">居住地</string>
+    <string name="person_setting_address_txt">填写居住地</string>
+
+
+    <string name="WeiTiXie">未填写</string>
+    <string name="location">可能来自火星喔</string>
+    <string name="signature">主人很懒,什么都没写呢…</string>
+
+    <!-- course -->
+    <string name="days">时间</string>
+    <string name="monday">周一</string>
+    <string name="tuesday">周二</string>
+    <string name="wednesday">周三</string>
+    <string name="thursday">周四</string>
+    <string name="friday">周五</string>
+    <string name="saturday">周六</string>
+    <string name="sunday">周日</string>
+    <string name="activity_course_week">第0周</string>
+    <string name="activity_course_add">添加课程</string>
+    <string name="activity_course_check">查看调课</string>
+    <string name="activity_course_refresh">刷新课表</string>
+    <string name="activity_schedule_menu_change">更换背景</string>
+    <string name="activity_schedule_menu_look">教学时间表</string>
+    <string name="dialog_course_delete">删除本节课</string>
+    <string name="dialog_course_title">课程信息</string>
+    <string name="dialog_course_name">课程名:</string>
+    <string name="dialog_course_room">教室:</string>
+    <string name="dialog_course_teacher">老师:</string>
+    <string name="dialog_course_week">周数:</string>
+
+
+
+    <!-- item_grade -->
+    <string name="course_name">课程名</string>
+    <string name="course_code">课程编号</string>
+    <string name="course_score">分数</string>
+    <string name="course_point">绩点</string>
+
+    <!-- snackbar -->
+    <string name="snackBar_message">尚未绑定海师学号</string>
+    <string name="snackBar_btn">去绑定</string>
+
+    <!-- 表白 -->
+    <string name="love_tableLove_title">在这里大声的说出你的爱</string>
+    <string name="love_tableLove_header">表白信</string>
+    <string name="love_tableLove_post">提 交</string>
+    <string name="love_tableLove_object_grade">对方年级专业</string>
+    <string name="love_tableLove">*</string>
+    <string name="love_tableLove_object_grade_abstract">年级+专业 如: 15汉语言</string>
+    <string name="love_tableLove_object_name">对方姓名</string>
+    <string name="love_tableLove_object_name_abstract">可以是你们之间的小暗号，也可以是你对他（她）的小昵称呢</string>
+    <string name="love_tableLove_content">信件内容</string>
+    <string name="love_tableLove_content_abstract">谨慎提交,提交后不能修改喔!</string>
+
+    <!-- 表白评论 -->
+    <string name="iem_loveComment_floor">1楼</string>
+    <string name="item_loveComment_username">匿名用户</string>
+    <string name="item_loveComment_time">2018-2-14 17:44</string>
+    <string name="item_loveComment_content">评论内容</string>
+
+    <!-- 时间 -->
+    <string name="time_exam">考试时间</string>
+    <string name="time_schoolBus">校车时间</string>
+    <string name="time_dormitory">寝室时间</string>
+    <string name="time_other">其他时间</string>
+    <string name="time_txt">本服务由BomDa提供</string>
+
+    <!-- 精选树洞 -->
+    <string name="item_tease_content">四谛法邝四谛健廉四谛法邝健四谛法邝健廉四谛法邝健廉法邝健廉四谛法邝健廉法邝健廉四谛法邝健廉四谛法邝健廉四谛法邝健廉四谛法邝健廉四谛法邝健廉四谛法邝健廉四谛法邝健廉四谛法邝健廉</string>
+    <string name="item_tease_praise">喜欢</string>
+    <string name="item_tease_splitter">|</string>
+    <string name="item_tease_comment">评论</string>
+    <string name="item_tease_nick">BomDa</string>
+    <string name="item_tease_signature">签名喔</string>
+    <string name="item_tease_location">地点</string>
+    <string name="item_tease_focus">＋关注</string>
+    <string name="item_tease_isFocus">已关注</string>
+    <string name="item_tease_type">#吐槽#</string>
+
+    <!-- 精选二手市场-->
+    <string name="item_market_grid_name">魅族Mx4 Pro</string>
+    <string name="item_market_grid_splitter">￥</string>
+    <string name="item_market_grid_price">1000</string>
+    <string name="item_market_grid_description">啦啦啦啦啦</string>
+    <string name="item_market_grid_label">手机</string>
+    <string name="item_market_grid_look">100</string>
+    <string name="item_market_grid_comment">条评价</string>
+    <string name="item_market_grid_percent"> 好评</string>
+
+    <!-- 皮肤-->
+    <string name="skin_blue">天空蓝</string>
+    <string name="skin_pink">可爱粉</string>
+    <string name="skin_black">炫酷黑</string>
+    <string name="skin_green">清新绿</string>
+    <string name="skin_purple">基佬紫</string>
+
+    <!-- 上传照片 dialog -->
+    <string name="dialog_singleline_text_cancel">取消</string>
+    <string name="dialog_singleline_text_ok">确定</string>
+    <string name="dialog_upload_total">总进度：</string>
+    <string name="dialog_upload_cancel">取消</string>
+    <string name="dialog_upload_cur_index">上传第 %1$s 张照片：</string>
+    <string name="dialog_upload_cur_percent">%1$s</string>
+    <string name="dialog_upload_total_percent">%1$s/%2$s</string>
+    <string name="dialog_upload_tips">请保持良好的网络连接哦~</string>
+    <string name="dialog_upload_failure">上传失败</string>
+    <string name="dialog_upload_retry">重试</string>
+    <string name="dialog_upload_error_msg">已上传数：%1$d\n错误信息：(%2$d) %3$s。</string>
+
+    <!-- 发布动态 activity -->
+    <string name="activity_publish_dynamic_title">发布动态</string>
+    <string name="activity_publish_dynamic_fenlei">类别</string>
+    <string name="activity_publish_dynamic_richang">宠物日常</string>
+    <string name="activity_publish_dynamic_lingyang">宠物领养</string>
+    <string name="activity_publish_dynamic_jiyang">宠物寄养</string>
+    <string name="activity_publish_dynamic_xunchong">寻宠启示</string>
+    <string name="activity_dynamic_content_hint">动态内容</string>
+    <string name="activity_publish_dynamic_picture_upload">上传照片</string>
+
+    <!-- 发布动态 dialog -->
+    <string name="dialog_publish_publishing">正在发布</string>
+    <string name="dialog_publish_success">发布成功</string>
+    <string name="dialog_publish_failure">发布失败</string>
+    <string name="dialog_publish_ok">确定</string>
+    <string name="dialog_publish_retry">重试</string>
+    <string name="dialog_publish_error_msg">错误信息：(%1$d) %2$s。</string>
+
+
+    <!-- 菜单 -->
+    <string name="menu_activity_publish_dynamic_publish">发布</string>
+    <string name="menu_activity_user_info_reset_pwd">修改密码</string>
+    <string name="menu_activity_user_info_logout">退出登录</string>
+
+</resources>

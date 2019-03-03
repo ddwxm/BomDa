@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/activity_schedule_menu_look"
+        android:orderInCategory="100"
+        android:title="@string/activity_schedule_menu_look"
+        app:showAsAction="never" />
+</menu>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="code">
+        <item>+86</item>
+    </string-array>
+
+    <string-array name="year">
+        <item>2014-2015</item>
+        <item>2015-2016</item>
+        <item>2016-2017</item>
+        <item>2017-2018</item>
+    </string-array>
+
+    <string-array name="semester">
+        <item>第1学期</item>
+        <item>第2学期</item>
+    </string-array>
+
+    <string-array name="grade">
+        <item>高等数学一</item>
+        <item>大学英语一</item>
+        <item>数据库原理</item>
+    </string-array>
+
+    <string-array name="type">
+        <item>缺勤</item>
+        <item>早退</item>
+    </string-array>
+
+    <string-array name="week">
+        <item>第1周</item>
+        <item>第2周</item>
+        <item>第3周</item>
+        <item>第4周</item>
+        <item>第5周</item>
+        <item>第6周</item>
+        <item>第7周</item>
+        <item>第8周</item>
+        <item>第9周</item>
+        <item>第10周</item>
+        <item>第11周</item>
+        <item>第12周</item>
+        <item>第13周</item>
+        <item>第14周</item>
+        <item>第15周</item>
+        <item>第16周</item>
+        <item>第17周</item>
+        <item>第18周</item>
+    </string-array>
+</resources>

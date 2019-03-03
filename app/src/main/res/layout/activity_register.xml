@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorLightBlack">
+
+    <!-- 注册首页面 -->
+    <RelativeLayout
+        android:id="@+id/register_first"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <!-- 关闭按钮 -->
+        <ImageView
+            android:id="@+id/register_close"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            app:srcCompat="@drawable/ic_close_grey_24dp"
+            android:tint="@color/colorWhite"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="24dp"
+            android:layout_marginTop="36dp"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- 注册logo -->
+        <TextView
+            android:id="@+id/register_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="@string/register_title"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorWhite"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/register_close"/>
+
+        <!-- 手机注册按钮 -->
+        <Button
+            android:id="@+id/register_register"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:layout_below="@+id/register_logo"
+            android:layout_marginTop="64dp"
+            android:background="@drawable/btn_login_bg"
+            android:text="@string/register_phone"
+            android:textColor="@color/colorWhite"
+            android:textSize="20sp"/>
+
+        <!-- 注册 -->
+        <LinearLayout
+            android:id="@+id/register_terms_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="32dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/register_txt"
+                android:textColor="@color/colorWhite"/>
+
+            <!-- 服务协议 -->
+            <TextView
+                android:id="@+id/register_agreement"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:autoLink="all"
+                android:text="@string/register_agreement"
+                android:textColor="@color/colorWhite"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/register_and"
+                android:textColor="@color/colorWhite"/>
+
+            <!-- 隐私条款 -->
+            <TextView
+                android:id="@+id/register_privacy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:autoLink="all"
+                android:text="@string/register_privacy"
+                android:textColor="@color/colorWhite"/>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <!-- 注册副页面 -->
+    <RelativeLayout
+        android:id="@+id/register_second"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+        <!-- 返回按钮 -->
+        <ImageView
+            android:id="@+id/register_back_one"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="36dp"
+            android:layout_marginBottom="24dp"
+            app:srcCompat="@drawable/ic_back_white_24dp"/>
+
+        <!-- 手机号码logo -->
+        <TextView
+            android:id="@+id/register_phone_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/register_back_one"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="12dp"
+            android:text="@string/register_phoneNum_logo"
+            android:textSize="18sp"
+            android:textColor="@color/colorWhite"/>
+
+        <!-- 手机号码 -->
+        <LinearLayout
+            android:id="@+id/register_phone_input"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_below="@+id/register_phone_logo"
+            android:layout_margin="24dp">
+
+            <!-- 手机号码区号 -->
+            <TextView
+                android:layout_width="64dp"
+                android:layout_height="wrap_content"
+                android:text="@string/area_code"
+                android:textSize="@dimen/txt_medium_big_size"
+                android:textColor="@color/colorWhite"
+                android:gravity="center">
+            </TextView>
+
+            <!-- 手机号码输入框 -->
+            <EditText
+                android:id="@+id/register_phoneNumber"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:backgroundTint="@color/colorWhite"
+                android:backgroundTintMode="screen"
+                android:inputType="phone"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:textSize="18sp"
+                android:textColor="@color/colorWhite"/>
+
+        </LinearLayout>
+
+        <!-- 手机注册按钮 -->
+        <Button
+            android:id="@+id/register_register_btn"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:layout_below="@+id/register_phone_input"
+            android:layout_marginTop="44dp"
+            android:background="@drawable/login_login_btn"
+            android:text="@string/register_next"
+            android:textColor="@color/colorWhite"
+            android:enabled="false"
+            android:clickable="false"
+            android:textSize="20sp"/>
+
+    </RelativeLayout>
+
+    <!-- 注册三页面 -->
+
+    <RelativeLayout
+        android:id="@+id/register_third"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <!-- 返回按钮 -->
+        <ImageView
+            android:id="@+id/register_back_two"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="36dp"
+            android:layout_marginBottom="24dp"
+            app:srcCompat="@drawable/ic_back_white_24dp"/>
+
+        <!-- 验证码logo -->
+        <TextView
+            android:id="@+id/register_code_send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="@string/register_code"
+            android:textSize="28sp"
+            android:textColor="@color/colorWhite"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/register_back_two"/>
+
+        <LinearLayout
+            android:id="@+id/register_SMS"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/register_code_send"
+            android:gravity="center">
+
+            <!-- 短信已发送 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/register_send"
+                android:textSize="@dimen/txt_medium_big_size"
+                android:textColor="@color/colorWhite"/>
+
+            <!-- 手机号码 -->
+            <TextView
+                android:id="@+id/code_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/register_phoneNum"
+                android:textSize="@dimen/txt_medium_big_size"
+                android:layout_marginStart="2dp"
+                android:textColor="@color/colorWhite"/>
+
+        </LinearLayout>
+
+        <com.alimuzaffar.lib.pin.PinEntryEditText
+            android:id="@+id/input_code"
+            android:layout_below="@+id/register_SMS"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginTop="48dp"
+            android:textColor="@color/colorWhite"
+            android:maxLength="6"
+            android:cursorVisible="false"
+            android:digits="1234567890"
+            android:inputType="number"
+            android:textIsSelectable="false"
+            android:textSize="20sp"
+            app:pinAnimationType="popIn">
+
+        </com.alimuzaffar.lib.pin.PinEntryEditText>
+
+        <TextView
+            android:id="@+id/code_timer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/register_timer"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/input_code"
+            android:layout_marginTop="@dimen/padding_margin"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/txt_medium_size"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

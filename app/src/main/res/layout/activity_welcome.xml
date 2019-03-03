@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_welcome"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/background_light"
+    tools:context=".view.activity.WelcomeActivity">
+
+    <ImageView
+        android:id="@+id/imv_welcome"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_above="@+id/ll_welcome"
+        android:contentDescription="@string/welcome_image"
+        android:scaleType="centerInside"/>
+
+    <LinearLayout
+        android:id="@+id/ll_welcome"
+        android:layout_width="match_parent"
+        android:layout_height="76dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:clipToPadding="false">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/welcome_logo"
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:contentDescription="@string/app_logo"
+                    android:src="@drawable/ic_logo_red_40dp"/>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp">
+
+                    <ImageView
+                        android:id="@+id/welcome_name"
+                        android:layout_width="84dp"
+                        android:layout_height="28dp"
+                        android:src="@drawable/ic_appname_black"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/welcome_instructions"
+                android:layout_width="match_parent"
+                android:layout_height="16dp"
+                android:contentDescription="@string/app_logo"
+                android:src="@drawable/ic_instructions_black"
+                android:layout_marginTop="4dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_skip"
+        android:layout_width="56dp"
+        android:layout_height="24dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="20dp"
+        android:text="@string/welcome_s"
+        android:layout_above="@+id/ll_welcome"
+        android:textSize="16sp"
+        android:textColor="@color/colorWhite"
+        android:background="@drawable/loding_button_shape"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Inverse"
+        style="@style/Widget.AppCompat.Button.Borderless"/>
+
+</RelativeLayout>

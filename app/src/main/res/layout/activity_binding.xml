@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/binding_id"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginTop="72dp"
+        android:textSize="16sp"
+        android:hint="@string/binding_id" />
+
+    <EditText
+        android:id="@+id/binding_password"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:inputType="textPassword"
+        android:layout_marginStart="36dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginTop="16dp"
+        android:layout_below="@+id/binding_id"
+        android:textSize="16sp"
+        android:hint="@string/binding_password" />
+
+    <RelativeLayout
+        android:id="@+id/binding_VerificationCode_lin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginEnd="36dp"
+        android:layout_below="@+id/binding_password"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/binding_code"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="16dp"
+            android:textSize="16sp"
+            android:hint="@string/binding_code" />
+
+        <ImageView
+            android:id="@+id/binding_verificationCode"
+            android:layout_width="96dp"
+            android:layout_height="48dp"
+            android:background="@drawable/ic_failed_grey_24dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"/>
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/binding_binding"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginEnd="36dp"
+        android:layout_below="@+id/binding_VerificationCode_lin"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/login_login_btn"
+        android:text="@string/binding_binding"
+        android:clickable="false"
+        android:textColor="@color/colorWhite"
+        android:textSize="18sp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="24dp"
+        android:gravity="center">
+
+        <CheckBox
+            android:id="@+id/binding_check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:layout_centerVertical="true"/>
+
+        <TextView
+            android:id="@+id/binding_agree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/binding_prompt"
+            android:layout_toEndOf="@+id/binding_check"
+            android:layout_centerVertical="true"/>
+
+        <TextView
+            android:id="@+id/binding_service"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/binding_agreement"
+            android:layout_toEndOf="@+id/binding_agree"
+            android:layout_centerVertical="true"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

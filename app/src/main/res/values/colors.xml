@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#2196f3</color>
+    <color name="colorPrimaryDark">#2196f3</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="windowBackgroundLight">#fafafa</color>
+    <color name="windowBackgroundDark">#303030</color>
+
+    <color name="colorWhite">#fff</color>
+    <color name="colorLightBlack">#574f5d</color>
+    <color name="colorLightNoBlack">#696969</color>
+    <color name="colorGreen">#22c788</color>
+    <color name="colorLightGreen">#2dc123</color>
+    <color name="colorBlackGreen">#427e6b</color>
+    <color name="colorBlue">#2196f3</color>
+    <color name="colorBlackBlue">#0d47a1</color>
+    <color name="colorGery">#8a8a8a</color>
+    <color name="colorLightBlue">#039be5</color>
+    <color name="colorSuperLightBlue">#cee8fa</color>
+
+    <color name="textPrimaryDark">#deffffff</color>
+    <color name="textSecondaryDark">#8affffff</color>
+    <color name="textPrimaryLight">#de000000</color>
+    <color name="colorRed">#FF1744</color>
+
+    <color name="divider_line">#33000000</color> <!-- 分割线颜色 -->
+    <color name="divider_line_2">#1a000000</color>
+
+    <color name="colorPink">#f7aeb4</color>
+    <color name="colorNormalPink">#f48db1</color>
+    <color name="colorDarkPink">#ed4e96</color>
+    <color name="colorSuperDarkPink">#FF4081</color>
+
+    <color name="colorGray">#9e9e9e</color>
+    <color name="colorDarkGray">#424242</color>
+    <color name="colorLightGray">#e0e0e0</color>
+    <color name="colorSuperLightGray">#f5f5f5</color>
+    <color name="windowBackgroundTranslucent">#00000000</color>
+
+    <!-- text color-->
+    <color name="colorBlackGray">#757575</color>
+    <color name="colorYellow">#ffd600</color>
+    <color name="colorLightYellow">#ffea00</color>
+    <color name="colorPurple">#ab47bc</color>
+    <color name="colorCyan">#36c6da</color>
+    <color name="colorNormalGreen">#81c784</color>
+    <color name="colorSuperLightYellow">#fff59d</color>
+    <color name="colorLightPink">#f48fb1</color>
+    <color name="colorLightPurple">#ce93d8</color>
+    <color name="colorAmber">#ffe082</color>
+    <color name="colorLightGold">#fafad2</color>
+    <color name="colorGold">#ffd700</color>
+    <color name="colorBlueDark">#00b0ff</color>
+
+    <color name="colorPrimaryTextBlack">#de000000</color> <!-- 黑色主文本 -->
+    <color name="colorSecondaryTextBlack">#8a000000</color> <!-- 黑色副文本 -->
+    <color name="colorPrimaryTextWhite">#deffffff</color> <!-- 白色主文本 -->
+    <color name="colorSecondaryTextWhite">#8affffff</color> <!-- 白色副文本 -->
+
+    <!-- system -->
+    <color name="titleBackgroundColor">#42A5F5</color>
+    <color name="defaultButtonColor">#6ab8f4</color>
+    <color name="titleColor" >#FFFFFF</color>
+    <color name="defaultButtonTextColor">#FFFFFF</color>
+    <color name="defaultEditTextBackgroundFocus">#42A5F5</color>
+    <color name="defaultEditTextBackground">#8a8a8a</color>
+    <color name="defaultEditTextHintColor">#888888</color>
+    <color name="tabTextSelectColor">#6ab8f4</color>
+    <color name="tabBackground">#ececec</color>
+    <color name="newsTextColor">#333333</color>
+    <color name="courseHeaderBackground">#eff9f8</color>
+    <color name="courseTextColor">#4c5a65</color>
+    <color name="courseDetailTextColor">#212121</color>
+    <color name="defaultBackground">#eeeeee</color>
+    <color name="courseCanvasBackground">#fbfbfc</color>
+    <color name="courseBackground1">#80ef9ea0</color>
+    <color name="courseBackground2">#8098d262</color>
+    <color name="courseBackground3">#80f4c873</color>
+    <color name="courseBackground4">#80e395b4</color>
+    <color name="courseBackground5">#808daae1</color>
+    <color name="courseBackground6">#8075b7a0</color>
+    <color name="courseBackground7">#8065c0e6</color>
+    <color name="main_color">#02428E</color>
+    <color name="main_color_bg">#fffff0</color>
+    <color name="main_text_color">#fffff0</color>
+    <color name="btn_pressed_color">#0B294D</color>
+    <color name="grey">#d4d4d4</color>
+    <color name="link_color">#4F92D2</color>
+    <color name="green">#008D14</color>
+    <color name="red">#EC4D48</color>
+    <color name="black">#000000</color>
+    <color name="actionbarbg">#065B9B</color>
+    <color name="psw_bg_color">#efefef</color>
+    <drawable name="list_bg_normal">#E2E0E2</drawable>
+    <drawable name="list_bg_pressed">#14CAD9</drawable>
+</resources>

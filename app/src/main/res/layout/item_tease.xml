@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:clickable="true"
+    android:foreground="?attr/selectableItemBackgroundBorderless"
+    android:stateListAnimator="@animator/cardview_touch_raise"
+    app:contentPaddingTop="4dp"
+    app:contentPaddingBottom="4dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="2dp">
+
+        <!-- 头部 -->
+        <RelativeLayout
+            android:id="@+id/item_tease_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- 头像 -->
+            <ImageView
+                android:id="@+id/item_tease_avatar"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:scaleType="centerCrop"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginBottom="8dp"
+                android:clickable="true"
+                android:foreground="@drawable/fg_imv_avatar"
+                app:srcCompat="@drawable/ic_avatar_24dp"
+                tools:ignore="ContentDescription" />
+
+            <LinearLayout
+                android:layout_width="144dp"
+                android:layout_height="44dp"
+                android:orientation="vertical"
+                android:layout_toEndOf="@+id/item_tease_avatar"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="24dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <!-- 昵称 -->
+                    <TextView
+                        android:id="@+id/item_tease_nick"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/item_tease_nick"
+                        android:textColor="@android:color/primary_text_light"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:layout_marginEnd="2dp" />
+
+                    <!-- 性别 -->
+                    <ImageView
+                        android:id="@+id/item_tease_sex"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_marginStart="6dp"
+                        app:srcCompat="@drawable/ic_man_blue_24dp"/>
+
+                </LinearLayout>
+
+                <!-- 时间 -->
+                <TextView
+                    android:id="@+id/item_tease_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="@string/item_loveComment_time"
+                    android:textColor="@color/textPrimaryLight"
+                    android:textSize="@dimen/txt_medium_small_size"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <!-- 分割线 -->
+        <View
+            android:id="@+id/item_tease_view"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="4dp"
+            android:layout_below="@+id/item_tease_header"
+            android:background="@color/colorSuperLightGray"/>
+
+        <!-- 内容 -->
+        <TextView
+            android:id="@+id/item_tease_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/item_tease_view"
+            android:ellipsize="end"
+            android:maxLines="4"
+            android:text="@string/item_tease_content"
+            android:textSize="@dimen/txt_medium_size"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="6dp"/>
+
+        <!-- 图片 -->
+        <com.jaeger.ninegridimageview.NineGridImageView
+            android:id="@+id/item_tease_pictures"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:layout_below="@+id/item_tease_content"
+            app:maxSize="9"
+            app:imgGap="4dp"
+            app:showStyle="fill"
+            app:singleImgSize="176dp"/>
+
+        <!-- 发表地点 -->
+        <RelativeLayout
+            android:id="@+id/item_tease_location_rl"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginBottom="6dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:layout_marginTop="6dp"
+            android:layout_below="@+id/item_tease_pictures">
+
+            <ImageView
+                android:id="@+id/item_tease_location_im"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:tint="@color/colorGray"
+                android:layout_centerVertical="true"
+                app:srcCompat="@drawable/ic_location_gray_24dp"/>
+
+            <TextView
+                android:id="@+id/item_tease_location"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_toEndOf="@+id/item_tease_location_im"
+                android:gravity="center_vertical"
+                android:layout_marginStart="4dp"
+                android:text="@string/item_tease_location"
+                android:textSize="12sp"/>
+
+        </RelativeLayout>
+
+        <!-- 分割线 -->
+        <View
+            android:id="@+id/item_tease_view1"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_below="@+id/item_tease_location_rl"
+            android:background="@color/colorSuperLightGray"/>
+
+        <!-- 点赞收藏评论 -->
+        <LinearLayout
+            android:id="@+id/dynamic_function"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_below="@+id/item_tease_view1"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="6dp"
+            android:gravity="end|center_vertical"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/item_tease_praise"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <com.sackcentury.shinebuttonlib.ShineButton
+                    android:id="@+id/item_tease_praise_sb"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@android:color/darker_gray"
+                    app:btn_color="@android:color/darker_gray"
+                    app:btn_fill_color="@color/colorRed"
+                    app:allow_random_color="false"
+                    app:siShape="@raw/heart"
+                    android:clickable="false"
+                    android:layout_marginEnd="6dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/item_tease_praise"
+                    android:textSize="@dimen/txt_medium_small_size"
+                    android:textColor="@android:color/primary_text_light"
+                    android:layout_marginEnd="4dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/item_activity_symbol_one"
+                    android:textSize="@dimen/txt_medium_small_size"
+                    android:textColor="@android:color/primary_text_light"
+                    android:layout_marginEnd="2dp" />
+
+                <TextView
+                    android:id="@+id/item_tease_praise_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/mine_num"
+                    android:textSize="@dimen/txt_medium_size"
+                    android:textColor="@android:color/primary_text_light"
+                    android:layout_marginEnd="2dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/item_activity_symbol_two"
+                    android:textSize="@dimen/txt_medium_small_size"
+                    android:textColor="@android:color/primary_text_light"
+                    android:layout_marginEnd="6dp" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="16dp"
+                android:background="@color/textPrimaryLight"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="6dp"/>
+
+            <LinearLayout
+                android:id="@+id/item_tease_collection"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <com.sackcentury.shinebuttonlib.ShineButton
+                    android:id="@+id/item_tease_collection_sb"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@android:color/darker_gray"
+                    app:btn_color="@android:color/darker_gray"
+                    app:btn_fill_color="@color/colorYellow"
+                    app:allow_random_color="false"
+                    android:clickable="false"
+                    app:siShape="@raw/star"
+                    android:layout_marginEnd="6dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/mine_collection_title"
+                    android:textSize="@dimen/txt_medium_small_size"
+                    android:textColor="@android:color/primary_text_light"
+                    android:layout_marginEnd="4dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/item_activity_symbol_one"
+                    android:textSize="@dimen/txt_medium_small_size"
+                    android:textColor="@android:color/primary_text_light"
+                    android:layout_marginEnd="2dp" />
+
+                <TextView
+                    android:id="@+id/item_tease_collection_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/mine_num"
+                    android:textSize="@dimen/txt_medium_size"
+                    android:textColor="@android:color/primary_text_light"
+                    android:layout_marginEnd="2dp" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/item_activity_symbol_two"
+                    android:textSize="@dimen/txt_medium_small_size"
+                    android:textColor="@android:color/primary_text_light"
+                    android:layout_marginEnd="6dp" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="16dp"
+                android:background="@color/textPrimaryLight"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="6dp"/>
+
+            <LinearLayout
+                android:id="@+id/item_tease_comment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <com.sackcentury.shinebuttonlib.ShineButton
+                    android:id="@+id/item_tease_comment_sb"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@android:color/darker_gray"
+                    app:btn_color="@android:color/darker_gray"
+                    app:btn_fill_color="@color/colorBlue"
+                    app:allow_random_color="false"
+                    app:siShape="@drawable/ic_sms"
+                    android:layout_marginEnd="6dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/item_tease_comment"
+                    android:textSize="@dimen/txt_medium_small_size"
+                    android:textColor="@android:color/primary_text_light"
+                    android:layout_marginEnd="4dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/item_activity_symbol_one"
+                    android:textSize="@dimen/txt_medium_small_size"
+                    android:textColor="@android:color/primary_text_light"
+                    android:layout_marginEnd="2dp" />
+
+                <TextView
+                    android:id="@+id/item_tease_comment_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/mine_num"
+                    android:textSize="@dimen/txt_medium_size"
+                    android:textColor="@android:color/primary_text_light"
+                    android:layout_marginEnd="2dp" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/item_activity_symbol_two"
+                    android:textSize="@dimen/txt_medium_small_size"
+                    android:textColor="@android:color/primary_text_light"
+                    android:layout_marginEnd="6dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

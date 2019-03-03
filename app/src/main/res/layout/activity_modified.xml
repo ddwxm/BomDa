@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/colorSuperLightGray">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!-- 头像条 -->
+            <RelativeLayout
+                android:id="@+id/modified_rl_avatar"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="12dp"
+                android:background="@android:color/background_light">
+
+                <ImageView
+                    android:id="@+id/avatar_imv"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="16dp"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/ic_avatar_24dp" />
+
+                <TextView
+                    android:id="@+id/avatar_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:foreground="?selectableItemBackground"
+                    android:clickable="true"
+                    android:gravity="center_vertical"
+                    android:paddingEnd="16dp"
+                    android:paddingStart="16dp"
+                    android:text="头像"
+                    android:textColor="@color/textPrimaryLight"
+                    android:textSize="16sp" />
+
+            </RelativeLayout>
+
+            <!-- 背景条 -->
+            <RelativeLayout
+                android:id="@+id/modified_rl_background"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="@android:color/background_light">
+
+                <ImageView
+                    android:id="@+id/background_imv"
+                    android:layout_width="38dp"
+                    android:layout_height="42dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="16dp"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@mipmap/mine_blue_bg" />
+
+                <TextView
+                    android:id="@+id/background_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:foreground="?selectableItemBackground"
+                    android:clickable="true"
+                    android:gravity="center_vertical"
+                    android:paddingEnd="16dp"
+                    android:paddingStart="16dp"
+                    android:text="主页背景"
+                    android:textColor="@color/textPrimaryLight"
+                    android:textSize="16sp" />
+
+            </RelativeLayout>
+
+            <!-- 昵称条 -->
+            <RelativeLayout
+                android:id="@+id/modified_rl_nick"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="@android:color/background_light">
+
+                <TextView
+                    android:id="@+id/nick_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="16dp"
+                    android:text="昵称"
+                    android:textSize="16sp"
+                    android:textColor="@color/textPrimaryLight" />
+
+                <TextView
+                    android:id="@+id/nick_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="end|center_vertical"
+                    android:paddingStart="16sp"
+                    android:paddingEnd="16dp"
+                    android:textSize="16sp"
+                    android:text="@string/person_nick"
+                    android:clickable="true"
+                    android:foreground="?selectableItemBackground" />
+
+            </RelativeLayout>
+
+            <!-- 性别条 -->
+            <RelativeLayout
+                android:id="@+id/modified_rl_sex"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="@android:color/background_light">
+
+                <TextView
+                    android:id="@+id/sex_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="16dp"
+                    android:text="性别"
+                    android:textSize="16sp"
+                    android:textColor="@color/textPrimaryLight" />
+
+                <TextView
+                    android:id="@+id/sex_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:gravity="end|center_vertical"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:textSize="16sp"
+                    android:text="@string/person_setting_sex_man"
+                    android:clickable="true"
+                    android:foreground="?selectableItemBackground" />
+
+            </RelativeLayout>
+
+            <!-- 二维码条 -->
+            <RelativeLayout
+                android:id="@+id/modified_rl_code"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="@android:color/background_light">
+
+                <TextView
+                    android:id="@+id/username_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical|start"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:textSize="16sp"
+                    android:textColor="@color/textPrimaryLight"
+                    android:text="二维码"
+                    android:clickable="true"
+                    android:foreground="?selectableItemBackground" />
+
+                <ImageView
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    app:srcCompat="@drawable/ic_qrcode_grey_24dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="16dp"/>
+
+            </RelativeLayout>
+
+            <!-- 签名条 -->
+            <RelativeLayout
+                android:id="@+id/modified_rl_signature"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="12dp"
+                android:background="@android:color/background_light">
+
+                <TextView
+                    android:id="@+id/signature_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="16dp"
+                    android:text="签名"
+                    android:textSize="16sp"
+                    android:textColor="@color/textPrimaryLight" />
+
+                <TextView
+                    android:id="@+id/signature_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:gravity="end|center_vertical"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:textSize="16sp"
+                    android:text="@string/person_setting_signature"
+                    android:clickable="true"
+                    android:foreground="?selectableItemBackground" />
+
+            </RelativeLayout>
+
+            <!-- 生日条 -->
+            <RelativeLayout
+                android:id="@+id/modified_rl_birth"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="@android:color/background_light">
+
+                <TextView
+                    android:id="@+id/birth_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="16dp"
+                    android:text="生日"
+                    android:textSize="16sp"
+                    android:textColor="@color/textPrimaryLight" />
+
+                <TextView
+                    android:id="@+id/birth_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginBottom="14dp"
+                    android:clickable="true"
+                    android:foreground="?selectableItemBackground"
+                    android:gravity="end|center_vertical"
+                    android:paddingEnd="16dp"
+                    android:paddingStart="16dp"
+                    android:text="1997-9-7"
+                    android:textSize="16sp" />
+
+            </RelativeLayout>
+
+            <!-- 地区条 -->
+            <RelativeLayout
+                android:id="@+id/modified_rl_region"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="@android:color/background_light">
+
+                <TextView
+                    android:id="@+id/region_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="16dp"
+                    android:text="地区"
+                    android:textSize="16sp"
+                    android:textColor="@color/textPrimaryLight" />
+
+                <TextView
+                    android:id="@+id/region_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:gravity="end|center_vertical"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:textSize="16sp"
+                    android:text="@string/person_setting_address"
+                    android:clickable="true"
+                    android:foreground="?selectableItemBackground" />
+
+            </RelativeLayout>
+
+            <!-- 个人介绍条 -->
+            <RelativeLayout
+                android:id="@+id/modified_rl_introduction"
+                android:layout_width="match_parent"
+                android:layout_height="84dp"
+                android:layout_marginTop="12dp"
+                android:background="@android:color/background_light">
+
+                <TextView
+                    android:id="@+id/introduction_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginStart="16dp"
+                    android:text="个人介绍"
+                    android:textSize="16sp"
+                    android:textColor="@color/textPrimaryLight" />
+
+                <TextView
+                    android:id="@+id/introduction_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:paddingStart="16dp"
+                    android:layout_below="@+id/introduction_label"
+                    android:paddingEnd="16dp"
+                    android:textSize="16sp"
+                    android:text="@string/person_introduction"
+                    android:clickable="true"
+                    android:foreground="?selectableItemBackground" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</android.support.design.widget.CoordinatorLayout>

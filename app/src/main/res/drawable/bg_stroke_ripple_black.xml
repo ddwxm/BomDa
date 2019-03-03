@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="#33000000"> <!-- 波纹颜色 -->
+
+    <!-- 波纹范围 -->
+    <item android:id="@android:id/mask">
+        <shape android:shape="rectangle">
+            <solid android:color="#ffffff" />
+            <corners android:radius="4dp" />
+        </shape>
+    </item>
+
+
+    <!-- 背景 -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#ffffff" />
+            <corners android:radius="4dp" />
+            <stroke android:color="@color/divider_line"
+                android:width="1dp" />
+        </shape>
+    </item>
+
+</ripple>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:foreground="?attr/selectableItemBackgroundBorderless"
+    android:stateListAnimator="@animator/cardview_touch_raise"
+    app:cardElevation="4dp"
+    app:cardCornerRadius="4dp"
+    android:layout_margin="8dp">
+
+    <!-- 用户信息栏 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="64dp">
+
+        <ImageView
+            android:id="@+id/item_blacklist_avatar"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="16dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_avatar_24dp"
+            android:clickable="true"
+            android:foreground="@drawable/bg_ripple_circle_black"/>
+
+        <TextView
+            android:id="@+id/item_blacklist_nickname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="68dp"
+            android:text="@string/blacklist_null"
+            android:layout_centerVertical="true"
+            android:textSize="16sp"
+            android:textColor="@color/textPrimaryLight" />
+
+
+        <Button
+            android:id="@+id/item_btn_remove"
+            android:layout_width="84dp"
+            android:layout_height="32dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="16dp"
+            android:text="@string/item_blacklist_remove"
+            android:textSize="14sp"
+            android:textColor="@color/textPrimaryLight"
+            android:background="@drawable/bg_stroke_ripple_black"
+            style="@style/Widget.AppCompat.Button.Borderless"/>
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

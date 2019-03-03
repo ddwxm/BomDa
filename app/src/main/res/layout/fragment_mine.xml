@@ -1,0 +1,582 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:elevation="0dp">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/mine_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="72dp"
+            android:background="@color/colorWhite"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:layout_collapseMode="pin"
+            app:contentInsetStart="0dp">
+
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:background="@color/colorSuperLightGray">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!-- 登录首部 -->
+            <android.support.v7.widget.CardView
+                android:id="@+id/mine_login_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/mine_login_rl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginTop="12dp"
+                        app:cardElevation="0dp"
+                        app:cardCornerRadius="4dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <!-- 已经登录 -->
+                            <RelativeLayout
+                                android:id="@+id/mine_isLogin"
+                                android:layout_width="match_parent"
+                                android:layout_height="84dp"
+                                android:background="@drawable/mine_info_bg"
+                                android:visibility="visible">
+
+                                <!-- 头像 -->
+                                <RelativeLayout
+                                    android:id="@+id/mine_avatar_rl"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:clipChildren="false"
+                                    android:layout_marginStart="20dp">
+
+                                    <ImageView
+                                        android:id="@+id/mine_avatar"
+                                        android:layout_width="64dp"
+                                        android:layout_height="64dp"
+                                        android:layout_gravity="center"
+                                        android:scaleType="centerCrop"
+                                        android:clickable="true"
+                                        android:layout_centerHorizontal="true"
+                                        android:foreground="@drawable/fg_imv_avatar"
+                                        app:srcCompat="@drawable/ic_avatar_24dp"/>
+
+                                </RelativeLayout>
+
+                                <LinearLayout
+                                    android:layout_width="144dp"
+                                    android:layout_height="56dp"
+                                    android:orientation="vertical"
+                                    android:layout_toEndOf="@+id/mine_avatar_rl"
+                                    android:layout_centerVertical="true"
+                                    android:gravity="center_vertical"
+                                    android:layout_marginStart="16dp">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="26dp"
+                                        android:orientation="horizontal"
+                                        android:gravity="center_vertical">
+
+                                        <TextView
+                                            android:id="@+id/mine_nick"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="@string/mine_nick"
+                                            android:textSize="@dimen/txt_medium_big_size"
+                                            android:textColor="@color/textPrimaryLight"
+                                            android:textStyle="bold"/>
+
+                                        <ImageView
+                                            android:id="@+id/mine_sex"
+                                            android:layout_width="16dp"
+                                            android:layout_height="16dp"
+                                            android:layout_marginStart="6dp"
+                                            app:srcCompat="@drawable/ic_man_blue_24dp"/>
+
+                                    </LinearLayout>
+
+                                    <TextView
+                                        android:id="@+id/mine_look"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="6dp"
+                                        android:text="@string/mine_look"
+                                        android:textColor="@color/textPrimaryLight"
+                                        android:textSize="16sp"/>
+
+                                </LinearLayout>
+
+                            </RelativeLayout>
+
+                            <!-- 尚未登录 -->
+                            <RelativeLayout
+                                android:id="@+id/mine_noLogin"
+                                android:layout_width="match_parent"
+                                android:layout_height="124dp"
+                                android:background="@drawable/mine_info_bg"
+                                android:visibility="gone">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/mine_login_title"
+                                    android:textColor="@color/textPrimaryLight"
+                                    android:textStyle="bold"
+                                    android:textSize="@dimen/txt_medium_big_size"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginTop="24dp"/>
+
+                                <Button
+                                    android:id="@+id/mine_go_login"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="42dp"
+                                    android:layout_marginStart="48dp"
+                                    android:layout_marginEnd="48dp"
+                                    android:layout_marginTop="64dp"
+                                    android:background="@drawable/bg_mine_login"
+                                    android:text="@string/mine_login_txt"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="@dimen/txt_medium_big_size"/>
+
+                            </RelativeLayout>
+
+                        </RelativeLayout>
+
+                    </android.support.v7.widget.CardView>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:layout_below="@+id/mine_login_rl"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp">
+
+                        <!-- 动态数 -->
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                            <TextView
+                                android:id="@+id/mine_dynamic_num"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="8dp"
+                                android:text="@string/mine_num"
+                                android:textSize="@dimen/txt_medium_big_size"
+                                android:textColor="@color/textPrimaryLight"/>
+
+                            <TextView
+                                android:id="@+id/mine_dynamic_title"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:paddingTop="8dp"
+                                android:paddingBottom="8dp"
+                                android:gravity="center_horizontal|bottom"
+                                android:text="@string/mine_dynamic_title"
+                                android:textSize="@dimen/txt_medium_small_size"
+                                android:clickable="true"
+                                android:background="?selectableItemBackground" />
+
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="0.1dp"
+                            android:layout_height="24dp"
+                            android:background="@color/colorGray"
+                            android:layout_gravity="center_vertical"/>
+
+                        <!-- 获赞数 -->
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                            <TextView
+                                android:id="@+id/mine_love_num"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="8dp"
+                                android:text="@string/mine_num"
+                                android:textSize="@dimen/txt_medium_big_size"
+                                android:textColor="@color/textPrimaryLight"/>
+
+                            <TextView
+                                android:id="@+id/mine_love_title"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:paddingTop="8dp"
+                                android:paddingBottom="8dp"
+                                android:gravity="center_horizontal|bottom"
+                                android:text="@string/mine_love_title"
+                                android:textSize="@dimen/txt_medium_small_size"
+                                android:clickable="true"
+                                android:background="?selectableItemBackground" />
+
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="0.1dp"
+                            android:layout_height="24dp"
+                            android:background="@color/colorGray"
+                            android:layout_gravity="center_vertical"/>
+
+                        <!-- 关注数 -->
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                            <TextView
+                                android:id="@+id/mine_focus_num"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="8dp"
+                                android:text="@string/mine_num"
+                                android:textSize="@dimen/txt_medium_big_size"
+                                android:textColor="@color/textPrimaryLight"/>
+
+                            <TextView
+                                android:id="@+id/mine_focus_title"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:paddingTop="8dp"
+                                android:paddingBottom="8dp"
+                                android:gravity="center_horizontal|bottom"
+                                android:text="@string/mine_focus_title"
+                                android:textSize="@dimen/txt_medium_small_size"
+                                android:clickable="true"
+                                android:background="?selectableItemBackground" />
+
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="0.1dp"
+                            android:layout_height="24dp"
+                            android:background="@color/colorGray"
+                            android:layout_gravity="center_vertical"/>
+
+                        <!-- 收藏数 -->
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                            <TextView
+                                android:id="@+id/mine_collection_num"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="8dp"
+                                android:text="@string/mine_num"
+                                android:textSize="@dimen/txt_medium_big_size"
+                                android:textColor="@color/textPrimaryLight"/>
+
+                            <TextView
+                                android:id="@+id/mine_collection_title"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:paddingTop="8dp"
+                                android:paddingBottom="8dp"
+                                android:gravity="center_horizontal|bottom"
+                                android:text="@string/mine_collection_title"
+                                android:textSize="@dimen/txt_medium_small_size"
+                                android:clickable="true"
+                                android:background="?selectableItemBackground" />
+
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <!-- 我的 -->
+            <android.support.v7.widget.CardView
+                android:id="@+id/mine_mine"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/mine_login_header"
+                android:layout_marginTop="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:background="@android:color/background_light"
+                        android:baselineAligned="false">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="16dp"
+                            app:srcCompat="@drawable/ic_brush_fill_blue_36dp" />
+
+                        <TextView
+                            android:id="@+id/mine_dynamic"
+                            android:layout_width="match_parent"
+                            android:layout_height="48dp"
+                            android:background="?selectableItemBackground"
+                            android:clickable="true"
+                            android:gravity="center_vertical"
+                            android:paddingEnd="16dp"
+                            android:paddingStart="72dp"
+                            android:text="@string/mine_post"
+                            android:textColor="@color/textPrimaryLight"
+                            android:textSize="16sp" />
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.1dp"
+                        android:layout_marginStart="72dp"
+                        android:background="@color/colorLightGray"/>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:background="@android:color/background_light">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="16dp"
+                            app:srcCompat="@drawable/ic_collection_fill_yellow_36dp" />
+
+                        <TextView
+                            android:id="@+id/mine_collection"
+                            android:layout_width="match_parent"
+                            android:layout_height="48dp"
+                            android:background="?selectableItemBackground"
+                            android:clickable="true"
+                            android:gravity="center_vertical"
+                            android:paddingEnd="16dp"
+                            android:paddingStart="72dp"
+                            android:text="@string/mine_collection"
+                            android:textColor="@color/textPrimaryLight"
+                            android:textSize="16sp" />
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.1dp"
+                        android:layout_marginStart="72dp"
+                        android:background="@color/colorLightGray"/>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:background="@android:color/background_light">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="16dp"
+                            app:srcCompat="@drawable/ic_browse_fill_blue_36dp" />
+
+                        <TextView
+                            android:id="@+id/mine_focus"
+                            android:layout_width="match_parent"
+                            android:layout_height="48dp"
+                            android:background="?selectableItemBackground"
+                            android:clickable="true"
+                            android:gravity="center_vertical"
+                            android:paddingEnd="16dp"
+                            android:paddingStart="72dp"
+                            android:text="@string/mine_focus"
+                            android:textColor="@color/textPrimaryLight"
+                            android:textSize="16sp" />
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.1dp"
+                        android:layout_marginStart="72dp"
+                        android:background="@color/colorLightGray"/>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:background="@android:color/background_light">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="16dp"
+                            app:srcCompat="@drawable/ic_group_fill_pink_36dp" />
+
+                        <TextView
+                            android:id="@+id/mine_friends"
+                            android:layout_width="match_parent"
+                            android:layout_height="48dp"
+                            android:background="?selectableItemBackground"
+                            android:clickable="true"
+                            android:gravity="center_vertical"
+                            android:paddingEnd="16dp"
+                            android:paddingStart="72dp"
+                            android:text="@string/mine_friends"
+                            android:textColor="@color/textPrimaryLight"
+                            android:textSize="16sp" />
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.1dp"
+                        android:layout_marginStart="72dp"
+                        android:background="@color/colorLightGray"/>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:background="@android:color/background_light">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="16dp"
+                            app:srcCompat="@drawable/ic_service_fill_red_36dp" />
+
+                        <TextView
+                            android:id="@+id/mine_buys"
+                            android:layout_width="match_parent"
+                            android:layout_height="48dp"
+                            android:background="?selectableItemBackground"
+                            android:clickable="true"
+                            android:gravity="center_vertical"
+                            android:paddingEnd="16dp"
+                            android:paddingStart="72dp"
+                            android:text="@string/mine_buys"
+                            android:textColor="@color/textPrimaryLight"
+                            android:textSize="16sp" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <!-- 功能 -->
+            <android.support.v7.widget.CardView
+                android:id="@+id/mine_tool_cv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/mine_mine"
+                android:layout_marginTop="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:background="@android:color/background_light">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="16dp"
+                            app:srcCompat="@drawable/ic_coordinates_fill_blue_36dp"/>
+
+                        <TextView
+                            android:id="@+id/mine_nearby"
+                            android:layout_width="match_parent"
+                            android:layout_height="48dp"
+                            android:gravity="center_vertical"
+                            android:paddingStart="72dp"
+                            android:paddingEnd="16dp"
+                            android:text="@string/mine_nearby"
+                            android:textSize="16sp"
+                            android:textColor="@color/textPrimaryLight"
+                            android:clickable="true"
+                            android:background="?selectableItemBackground" />
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.1dp"
+                        android:layout_marginStart="72dp"
+                        android:background="@color/colorLightGray"/>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:background="@android:color/background_light">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="16dp"
+                            app:srcCompat="@drawable/ic_setup_fill_grey_36dp"/>
+
+                        <TextView
+                            android:id="@+id/mine_tool"
+                            android:layout_width="match_parent"
+                            android:layout_height="48dp"
+                            android:gravity="center_vertical"
+                            android:paddingStart="72dp"
+                            android:paddingEnd="16dp"
+                            android:text="@string/activity_setting"
+                            android:textSize="16sp"
+                            android:textColor="@color/textPrimaryLight"
+                            android:clickable="true"
+                            android:background="?selectableItemBackground" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+        </RelativeLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</android.support.design.widget.CoordinatorLayout>

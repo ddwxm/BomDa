@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/windowBackgroundLight">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipChildren="false">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/person_info_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <!-- 顶部图片展示 -->
+                    <com.github.florent37.shapeofview.shapes.DiagonalView
+                        android:id="@+id/person_info_header"
+                        android:layout_width="match_parent"
+                        android:layout_height="264dp"
+                        app:diagonal_angle="8"
+                        app:diagonal_direction="right"
+                        app:diagonal_position="bottom">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:id="@+id/person_bg"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@mipmap/mine_blue_bg"
+                                android:scaleType="centerCrop"/>
+
+                            <!-- 返回 -->
+                            <ImageView
+                                android:id="@+id/person_back"
+                                android:layout_width="28dp"
+                                android:layout_height="28dp"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginEnd="32dp"
+                                android:layout_marginTop="32dp"
+                                android:tint="@color/colorWhite"
+                                app:srcCompat="@drawable/ic_back_white_24dp"
+                                android:layout_alignParentStart="true"/>
+
+                            <!-- 返回 -->
+                            <ImageView
+                                android:id="@+id/person_editor"
+                                android:layout_width="28dp"
+                                android:layout_height="28dp"
+                                android:layout_marginStart="32dp"
+                                android:layout_marginEnd="16dp"
+                                android:layout_marginTop="32dp"
+                                android:tint="@color/colorWhite"
+                                app:srcCompat="@drawable/ic_editor_white_24dp"
+                                android:layout_alignParentEnd="true"
+                                android:contentDescription="TODO" />
+
+                        </RelativeLayout>
+
+                    </com.github.florent37.shapeofview.shapes.DiagonalView>
+
+                    <!-- 头像 -->
+                    <RelativeLayout
+                        android:id="@+id/person_user"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="180dp"
+                        android:layout_marginStart="36dp"
+                        android:clipChildren="false">
+
+                        <ImageView
+                            android:id="@+id/person_avatar"
+                            android:layout_width="76dp"
+                            android:layout_height="76dp"
+                            android:layout_gravity="bottom"
+                            android:scaleType="centerCrop"
+                            android:clickable="true"
+                            android:foreground="@drawable/fg_imv_avatar"
+                            app:srcCompat="@drawable/ic_avatar_24dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentStart="true" />
+
+                    </RelativeLayout>
+
+                    <!-- 昵称 -->
+                    <RelativeLayout
+                        android:id="@+id/person_info"
+                        android:layout_width="116dp"
+                        android:layout_height="24dp"
+                        android:layout_below="@+id/person_user"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="8dp">
+
+                        <TextView
+                            android:id="@+id/person_nick"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:textColor="@color/textPrimaryLight"
+                            android:textStyle="bold"
+                            android:textSize="20sp"/>
+
+                        <!-- 性别 -->
+                        <ImageView
+                            android:id="@+id/person_sex"
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:layout_centerVertical="true"
+                            android:layout_toEndOf="@+id/person_nick"
+                            app:srcCompat="@drawable/ic_man_blue_24dp"
+                            android:layout_marginStart="6dp"/>
+
+                    </RelativeLayout>
+
+                    <!-- 签名 -->
+                    <TextView
+                        android:id="@+id/person_signature"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/person_introduction"
+                        android:layout_below="@+id/person_info"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginStart="36dp"
+                        android:textSize="@dimen/txt_medium_size"/>
+
+                    <!-- 关注粉丝 -->
+                    <LinearLayout
+                        android:id="@+id/person_social"
+                        android:layout_width="match_parent"
+                        android:layout_height="42dp"
+                        android:orientation="horizontal"
+                        android:layout_centerHorizontal="true"
+                        android:layout_below="@+id/person_signature"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginTop="4dp"
+                        android:background="@android:color/background_light">
+
+                        <!-- 关注 -->
+                        <RelativeLayout
+                            android:id="@+id/social_focus"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:clickable="true"
+                            android:background="?selectableItemBackground">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal"
+                                android:gravity="center">
+
+                                <TextView
+                                    android:id="@+id/person_focus_num"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/person_fans_txt"
+                                    android:textColor="@color/textPrimaryLight"
+                                    android:textSize="@dimen/txt_medium_big_size" />
+
+                                <TextView
+                                    android:id="@+id/person_focus"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/person_focus"
+                                    android:textSize="@dimen/txt_medium_size"
+                                    android:layout_marginStart="6dp"/>
+                            </LinearLayout>
+
+                        </RelativeLayout>
+
+                        <!-- 分割线 -->
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="#33000000"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp" />
+
+                        <!-- 粉丝 -->
+                        <RelativeLayout
+                            android:id="@+id/social_fans"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:clickable="true"
+                            android:background="?selectableItemBackground">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal"
+                                android:gravity="center">
+
+                                <TextView
+                                    android:id="@+id/person_fans_num"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/person_fans_txt"
+                                    android:textColor="@color/textPrimaryLight"
+                                    android:textSize="@dimen/txt_medium_big_size"/>
+
+                                <TextView
+                                    android:id="@+id/person_fans"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/person_fans"
+                                    android:layout_marginStart="8dp"
+                                    android:textSize="@dimen/txt_medium_size" />
+
+                            </LinearLayout>
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <!-- 封面 -->
+                    <LinearLayout
+                        android:id="@+id/person_cover"
+                        android:layout_width="64dp"
+                        android:layout_height="24dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginTop="216dp"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        android:background="@drawable/cover_bg"
+                        android:padding="4dp">
+
+                        <ImageView
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:tint="@color/colorWhite"
+                            app:srcCompat="@drawable/ic_praise_grey_24dp"
+                            android:layout_marginEnd="4dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/person_cover"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/txt_medium_small_size"/>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/person_info_card"
+                android:layout_marginTop="8dp"
+                android:paddingBottom="8dp">
+
+                <!-- 个人信息 -->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <View
+                        android:layout_width="3dp"
+                        android:layout_height="18dp"
+                        android:background="@color/colorPrimary"
+                        android:layout_marginTop="16dp"/>
+
+                    <TextView
+                        android:id="@+id/person_info_info"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="个人信息"
+                        android:textSize="14sp"
+                        android:layout_marginTop="16dp"
+                        android:textColor="@color/textPrimaryLight"
+                        android:layout_marginStart="16dp"/>
+
+                    <TextView
+                        android:id="@+id/person_info_age"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/person_info_sex"
+                        android:text="年龄："
+                        android:textSize="14sp"
+                        android:textColor="@color/colorDarkGray"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginStart="16dp"/>
+
+                    <TextView
+                        android:id="@+id/person_info_email"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="邮箱："
+                        android:textSize="14sp"
+                        android:textColor="@color/colorDarkGray"
+                        android:layout_below="@+id/person_info_age"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginStart="16dp"/>
+
+                    <TextView
+                        android:id="@+id/person_info_sex"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="地区："
+                        android:textSize="14sp"
+                        android:layout_below="@+id/person_info_info"
+                        android:textColor="@color/colorDarkGray"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginStart="16dp"/>
+
+                    <TextView
+                        android:id="@+id/person_info_email_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@+id/person_info_email"
+                        android:layout_toEndOf="@+id/person_info_email"
+                        android:layout_marginStart="2dp"
+                        android:textSize="14sp"/>
+
+                    <TextView
+                        android:id="@+id/person_info_interest"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="兴趣爱好："
+                        android:textSize="14sp"
+                        android:textColor="@color/colorDarkGray"
+                        android:layout_below="@+id/person_info_email"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginStart="16dp" />
+
+                    <TextView
+                        android:id="@+id/person_info_interest_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@+id/person_info_interest"
+                        android:layout_toEndOf="@+id/person_info_interest"
+                        android:layout_marginStart="2dp"
+                        android:textSize="14sp"/>
+
+                    <TextView
+                        android:id="@+id/person_info_sex_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@+id/person_info_sex"
+                        android:layout_toEndOf="@+id/person_info_sex"
+                        android:layout_marginStart="2dp"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/person_info_age_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:layout_marginStart="2dp"
+                        android:layout_toEndOf="@+id/person_info_age"
+                        android:layout_alignBaseline="@+id/person_info_age"/>
+
+                    <View
+                        android:layout_width="3dp"
+                        android:layout_height="18dp"
+                        android:background="@color/colorPrimary"
+                        android:layout_below="@+id/person_info_interest"
+                        android:layout_marginTop="16dp"/>
+
+                    <TextView
+                        android:id="@+id/person_info_lable"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="个人标签"
+                        android:textSize="14sp"
+                        android:textColor="@color/textPrimaryLight"
+                        android:layout_below="@+id/person_info_interest"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginStart="16dp"/>
+
+                    <View
+                        android:layout_width="3dp"
+                        android:layout_height="18dp"
+                        android:background="@color/colorPrimary"
+                        android:layout_below="@+id/person_info_lable"
+                        android:layout_marginTop="16dp"/>
+
+                    <TextView
+                        android:id="@+id/person_info_elucidation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="个人介绍"
+                        android:textSize="14sp"
+                        android:textColor="@color/textPrimaryLight"
+                        android:layout_below="@+id/person_info_lable"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginStart="16dp"/>
+
+                    <TextView
+                        android:id="@+id/person_info_elucidation_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/person_info_elucidation"
+                        android:layout_marginTop="10dp"
+                        android:text="很棒棒喔~"
+                        android:textSize="14sp"
+                        android:layout_marginStart="16dp"/>
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+
+        </RelativeLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</android.support.design.widget.CoordinatorLayout>
